@@ -1,3 +1,5 @@
+I used in this project React, nextJS
+
 ## Getting Started
 
 First, run the development server:
