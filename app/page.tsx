@@ -16,8 +16,6 @@ import { Pokemon } from '@/lib/types';
 import { Button } from '@/components/ui/button';
 import { Pagination, PaginationContent, PaginationEllipsis, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination';
 
-// Assuming Pokemon type includes id, name, weight, and sprites with at least front_default
-
 
 export default function Home() {
   const [pokemons, setPokemons] = useState<Pokemon[]>([]);
@@ -57,7 +55,7 @@ export default function Home() {
     fetchPokemons();
   }, [currentPage]);
 
-  // Generate page numbers for pagination
+  
   const paginationRange = (start: number, end: number) => [...Array(end - start + 1)].map((_, idx) => start + idx);
 
   let startPage = Math.max(currentPage - 2, 1);

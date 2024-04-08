@@ -15,7 +15,7 @@ export interface PokemonListItem {
   export interface Pokemon {
     id: number;
     name: string;
-    weight: number; // Added weight
+    weight: number;
     species: Species;
     stats: Array<{
       base_stat: number;
