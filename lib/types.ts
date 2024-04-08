@@ -7,23 +7,29 @@ export interface PokemonListItem {
     results: PokemonListItem[];
   }
   
+
+  export type Species = {
+    name: string;
+    url: string;
+  };
   export interface Pokemon {
     id: number;
     name: string;
     weight: number; // Added weight
-    sprites: {
-      front_default: string;
-    };
-    types: Array<{
-      type: {
-        name: string;
-      };
-    }>;
+    species: Species;
     stats: Array<{
       base_stat: number;
       stat: {
         name: string;
       };
     }>;
+    types: Array<{
+      type: {
+        name: string;
+      };
+    }>;
+    sprites: {
+      front_default: string;
+    };
   }
   
